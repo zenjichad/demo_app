@@ -1,3 +1,4 @@
 class Micropost < ActiveRecord::Base
-  validates :content,:length => {maximum=>140}
+  validates_length_of :content, :maximum=>140
+  belongs_to :user
 end
